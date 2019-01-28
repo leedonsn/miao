@@ -1,30 +1,19 @@
-var leedonsn = {
-    chunk: function chunk(ary, size = 1) {
+var leedonsn = function(){
+
+    function chunk(ary, size = 1) {
         var result = []
-        for(var i = 0; i< ary.length; i++) {
+        for(var i = 0; i<ary.length; i++) {
             result.push(ary.slice(i, i + size))
         }
         return result
-    },
-    compact: function(ary) {
+    }
+    function compact(ary) {
         var result = []
-        for(var item of ary) {
+        for (var item of ary) {
             if (item) {
                 result.push(item)
             }
         }
-        return result
-    }
-}
-
-
-var leedonsn = function(){
-
-    function chunk(ary, size = 1) {
-
-    }
-    function compact(ary) {
-
     }
 
     return {
