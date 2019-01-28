@@ -14,10 +14,21 @@ var leedonsn = function(){
                 result.push(item)
             }
         }
+        return result
+    }
+    function difference(array, [values]) {
+        var result = []
+        for(var i=0;i<array.length;i++){
+            if(values.indexOf(array[i])==-1){
+                result.push(array[i])
+            }
+        }
+        return result
     }
 
     return {
         chunk: chunk,
         compact: compact,
+        difference: difference,
     }
 }()
