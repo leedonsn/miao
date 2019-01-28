@@ -53,12 +53,32 @@ var leedonsn = function(){
             }
             return result
         }
-
+    }
+    function join(ary,str){
+        var result = ""
+        for(i=0;i<ary.length-1;i++){
+            result = result + ary[i].toString() + str
+        }
+        result = result + ary[ary.length-1]
+        return result
+    }
+    function drop(ary, n = 1){
+        var result = []
+        if(n >= ary.length){
+            return []
+        } else {
+            for(i=n;i<ary.length;i++){
+                result.push(ary[i])
+            }
+            return result
+        }
     }
     return {
         chunk: chunk,
         compact: compact,
         difference: difference,
         differenceBy:differenceBy,
+        join:join,
+        drop:drop,
     }
 }()
