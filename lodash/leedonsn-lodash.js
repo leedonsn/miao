@@ -79,6 +79,7 @@ var leedonsn = function(){
         for(i=start;i<end;i++){
             ary[i]=n
         }
+        return ary
     }
     return {
         chunk: chunk,
