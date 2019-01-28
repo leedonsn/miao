@@ -1,14 +1,14 @@
-var leedonsn = function(){
+let leedonsn = function(){
     function chunk(ary, size = 1) {
         var result = []
-        for(var i = 0; i<ary.length; i+=size) {
+        for(let i = 0; i<ary.length; i+=size) {
             result.push(ary.slice(i, i + size))
         }
         return result
     }
     function compact(ary) {
-        var result = []
-        for (var item of ary) {
+        let result = []
+        for (let item of ary) {
             if (item) {
                 result.push(item)
             }
