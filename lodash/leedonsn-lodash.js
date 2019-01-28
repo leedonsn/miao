@@ -29,10 +29,36 @@ var leedonsn = function(){
         }
         return result
     }
+    function differenceBy(array,...args) {
+        var result = []
+        var arguments = []
+        if(typeof args[args.length-1] === 'object') {
+            for (i = 0; i < args.length; i++) {
+                arguments = arguments.concat(args[i])
+            }
+            for (var i = 0; i < array.length; i++) {
+                if (arguments.indexOf(array[i]) == -1) {
+                    result.push(array[i])
+                }
+            }
+            return result
+        } else if(typeof args[args.length-1] === 'string'){
+            for (i = 0; i < args.length-1; i++) {
+                arguments = arguments.concat(args[i])
+            }
+            for (var i = 0; i < array.length; i++) {
+                if (arguments.indexOf(array[i]) == -1) {
+                    result.push(array[i])
+                }
+            }
+            return result
+        }
 
+    }
     return {
         chunk: chunk,
         compact: compact,
         difference: difference,
+        differenceBy:differenceBy,
     }
 }()
